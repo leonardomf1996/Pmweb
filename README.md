@@ -2,8 +2,16 @@
 # Teste Pmweb
 
 ## Instalação e utilização
+- Com o Docker instalado, criar o container: 
+	docker run --name postgres_pmweb -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+- Com o DBeaver instalado, criar uma conexão com o BD criado e criar uma base de dados (database) com o nome postgres_pmweb
 - Clone o projeto
-- Instale as dependências utilizando npm ou yarn
+- Instale as dependências utilizando:
+	npm instal ou yarn
+- Rode as migrations:
+	yarn typeorm migration:run
+	ou
+	npm typeorm migration:run
 - No terminal, digite: yarn dev (ou npm dev)
 
 
